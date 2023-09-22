@@ -3,8 +3,6 @@
 
 package kash
 
-import kash.internal.MonetaryImpl
-import kotlinx.serialization.Transient
 import kotlin.js.JsExport
 
 data class MoneyPresenter(
@@ -12,10 +10,11 @@ data class MoneyPresenter(
     val currency: Currency,
     val formatter: MoneyFormatter
 ) {
-    val amount: Amount by lazy { cents / 100 }
+    val amount: Numeral by lazy { cents / 100 }
 
-    @Transient
-    val money: Monetary = MonetaryImpl(cents.asULong, currency)
-
-    fun toFormattedString(): String = money.format(formatter)
+    fun toFormattedString(): String = formatter.format(amount.asDouble)
+        .replace(Template.CURRENCY_NAME, currency.name)
+        .replace(Template.CURRENCY_GLOBAL_SYMBOL, currency.globalSymbol)
+        .replace(Template.CURRENCY_LOCAL_SYMBOL, currency.localSymbol)
+        .replace("X ", "")
 }

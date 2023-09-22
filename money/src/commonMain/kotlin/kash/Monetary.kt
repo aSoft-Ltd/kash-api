@@ -8,6 +8,7 @@ import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 import kotlin.js.JsName
 
+@Deprecated("Do not use this class Anymore. Either Use Cents, or MoneyPresenter")
 @Serializable(with = MonetarySerializer::class)
 interface Monetary : Money {
 

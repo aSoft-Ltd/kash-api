@@ -13,7 +13,7 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
     }
 }
 
-listOf("kommander", "kollections", "koncurrent", "neat", "cinematic", "kase", "lexi", "symphony").forEach {
+listOf("kommander", "kollections", "kase").forEach {
     includeBuild("../$it")
 }
 
@@ -21,4 +21,4 @@ rootProject.name = "kash-api"
 
 includeBuild("build-logic-kash-api")
 
-includeSubs("kash", ".", "currency", "money", "cents", "fields")
+includeSubs("kash", ".", "currency", "money", "cents")
