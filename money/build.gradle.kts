@@ -35,6 +35,7 @@ kotlin {
             dependencies {
                 api(projects.kashCents)
                 api(projects.kashCurrency)
+                api(libs.neat.formatting)
             }
         }
         val commonTest by getting {

@@ -34,7 +34,6 @@ kotlin {
             kotlin.srcDir(dir)
             dependencies {
                 api(kotlinx.serialization.core)
-                api(libs.neat.formatting)
             }
         }
         val commonTest by getting {

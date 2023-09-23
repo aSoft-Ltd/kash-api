@@ -13,7 +13,7 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
     }
 }
 
-listOf("kommander", "kollections", "kase").forEach {
+listOf("kommander", "neat").forEach {
     includeBuild("../$it")
 }
 
