@@ -1,6 +1,6 @@
 package kash
 
-import formatter.NumberFormatterOptions
+import neat.NumberFormatterOptions
 
 inline fun NumberFormatterOptions.toMoneyFormatterOptions() = MoneyFormatterOptions(
     abbreviate = abbreviate,

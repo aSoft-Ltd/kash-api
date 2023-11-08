@@ -3,7 +3,7 @@
 
 package kash
 
-import liquid.NumberFormatter
+import neat.NumberFormatter
 import kotlin.js.JsExport
 import kotlin.js.JsName
 

@@ -1,8 +1,8 @@
 package kash.internal
 
-import liquid.NumberFormatter
-import liquid.NumberFormatterRawOptions
-import liquid.toFormatterOptions
+import neat.NumberFormatter
+import neat.NumberFormatterRawOptions
+import neat.toFormatterOptions
 import kash.MoneyFormatter
 import kash.Pretty
 
