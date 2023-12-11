@@ -3,7 +3,7 @@
 package kash
 
 import kash.internal.CentsULongImpl
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 inline val Number.cents: Cents get() = CentsULongImpl(toLong().toULong())

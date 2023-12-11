@@ -4,7 +4,7 @@
 package symphony.changes
 
 import symphony.numerics.Percentage
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 fun changeRemarkOf(
     previous: Number,

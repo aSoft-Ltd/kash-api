@@ -28,7 +28,7 @@ abstract class CurrencyGenerator : AbstractGenerator() {
             package $pkg
             
             import kotlin.jvm.JvmStatic
-            import kotlin.js.JsExport
+            import kotlinx.JsExport
             import kotlinx.serialization.Serializable
             
             @Serializable(with = ISO3CurrencySerializer::class)

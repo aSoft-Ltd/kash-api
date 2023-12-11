@@ -2,7 +2,7 @@
 
 package kash
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.jvm.JvmField
 
 object Template {

@@ -3,7 +3,7 @@
 
 package kash
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 data class MoneyPresenter(
     val cents: Cents,

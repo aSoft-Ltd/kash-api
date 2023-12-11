@@ -6,7 +6,7 @@ package kash
 import kash.serializers.MoneySerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 @Deprecated("In favour of Cents or MoneyPresenter")

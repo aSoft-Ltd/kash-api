@@ -4,7 +4,7 @@
 package kash
 
 import kash.internal.MonetaryImpl
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 import kotlin.jvm.JvmName
 

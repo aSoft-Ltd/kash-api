@@ -34,6 +34,7 @@ kotlin {
             kotlin.srcDir(dir)
             dependencies {
                 api(kotlinx.serialization.core)
+                api(libs.kotlinx.exports)
             }
         }
         val commonTest by getting {

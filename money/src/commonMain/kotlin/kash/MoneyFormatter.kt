@@ -4,7 +4,7 @@
 package kash
 
 import neat.NumberFormatter
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 class MoneyFormatter(formatter: NumberFormatter) : NumberFormatter by formatter {

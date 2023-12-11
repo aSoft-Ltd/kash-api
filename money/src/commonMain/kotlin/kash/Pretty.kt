@@ -11,7 +11,7 @@ import kash.MoneyFormatterOptions.Companion.DEFAULT_ENFORCE_DECIMALS
 import kash.MoneyFormatterOptions.Companion.DEFAULT_POSTFIX
 import kash.MoneyFormatterOptions.Companion.DEFAULT_PREFIX
 import kash.MoneyFormatterOptions.Companion.DEFAULT_THOUSAND_SEPERATOR
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 interface Pretty {

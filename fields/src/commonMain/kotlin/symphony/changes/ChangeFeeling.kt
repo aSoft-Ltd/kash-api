@@ -2,7 +2,7 @@
 
 package symphony.changes
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 enum class ChangeFeeling {
     Unknown, Good, Bad, Neutral

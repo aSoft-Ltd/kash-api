@@ -3,7 +3,7 @@
 
 package kash
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 interface Numeral {
     val asULong: ULong

@@ -13,7 +13,7 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
     }
 }
 
-listOf("kommander", "neat").forEach {
+listOf("kommander", "neat","kotlinx-interoperable").forEach {
     includeBuild("../$it")
 }
 

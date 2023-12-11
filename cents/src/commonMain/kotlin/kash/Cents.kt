@@ -5,7 +5,7 @@ package kash
 
 import kash.serializer.CentsSerializer
 import kotlinx.serialization.Serializable
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 @Serializable(with = CentsSerializer::class)

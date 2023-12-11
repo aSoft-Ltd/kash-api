@@ -5,7 +5,7 @@ package symphony.changes
 
 import kash.Money
 import symphony.numerics.Percentage
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 private const val CHANGE_MONEY_REMARK_OF = "changeMoneyRemarkOf"

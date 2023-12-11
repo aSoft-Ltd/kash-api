@@ -4,7 +4,7 @@
 package symphony.numerics
 
 import kotlinx.serialization.Serializable
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 import kotlin.jvm.JvmField
 import kotlin.jvm.JvmStatic
