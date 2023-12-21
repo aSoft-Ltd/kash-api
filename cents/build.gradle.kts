@@ -20,6 +20,7 @@ kotlin {
         val commonMain by getting {
 			dependencies {
 				api(kotlinx.serialization.core)
+				api(libs.kollections.interoperable)
                 api(libs.kotlinx.exports)
 			}
         }

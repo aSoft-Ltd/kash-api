@@ -1,7 +1,10 @@
 package kash
 
+import kollections.Iterable
+import kollections.forEach
+
 fun Iterable<Money>.sum(): Money {
     var total: Money = Zero
-    for (i in this) total += i
+    forEach { total += it }
     return total
 }
