@@ -10,7 +10,8 @@ description = "A kotlin multiplatform library to deal with money"
 kotlin {
     jvm { library() }
     if (Targeting.JS) js(IR) { library() }
-//    if (Targeting.WASM) wasm { library() }
+    if (Targeting.WASM) wasmJs { library() }
+    if (Targeting.WASM) wasmWasi { library() }
     if (Targeting.OSX) osxTargets() else listOf()
 //    if (Targeting.NDK) ndkTargets() else listOf()
     if (Targeting.LINUX) linuxTargets() else listOf()
