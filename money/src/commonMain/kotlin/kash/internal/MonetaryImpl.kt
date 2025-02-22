@@ -11,7 +11,7 @@ import kash.toMonetary
 
 @PublishedApi
 internal data class MonetaryImpl(
-    override val centsAsLong: ULong,
+    override val centsAsLong: Long,
     override val currency: Currency
 ) : AbstractPretty(), Monetary {
 
@@ -36,9 +36,9 @@ internal data class MonetaryImpl(
     }
 
     override operator fun plus(other: Money) = when {
-        centsAsLong == 0uL && other.centsAsLong == 0uL -> Zero
-        centsAsLong == 0uL && other.centsAsLong != 0uL -> MonetaryImpl(other.centsAsLong, other.currency)
-        centsAsLong != 0uL && other.centsAsLong == 0uL -> this
+        centsAsLong == 0L && other.centsAsLong == 0L -> Zero
+        centsAsLong == 0L && other.centsAsLong != 0L -> MonetaryImpl(other.centsAsLong, other.currency)
+        centsAsLong != 0L && other.centsAsLong == 0L -> this
         else -> {
             currencyCheckFor("addition", other)
             MonetaryImpl(centsAsLong + other.centsAsLong, currency)
@@ -52,9 +52,9 @@ internal data class MonetaryImpl(
     override operator fun plus(other: Double) = this + other.toMonetary(currency)
 
     override operator fun minus(other: Money) = when {
-        centsAsLong == 0uL && other.centsAsLong == 0uL -> Zero
-        centsAsLong == 0uL && other.centsAsLong != 0uL -> MonetaryImpl(other.centsAsLong, other.currency)
-        centsAsLong != 0uL && other.centsAsLong == 0uL -> this
+        centsAsLong == 0L && other.centsAsLong == 0L -> Zero
+        centsAsLong == 0L && other.centsAsLong != 0L -> MonetaryImpl(other.centsAsLong, other.currency)
+        centsAsLong != 0L && other.centsAsLong == 0L -> this
         else -> {
             currencyCheckFor("subtraction", other)
             MonetaryImpl(centsAsLong - other.centsAsLong, currency)
@@ -65,11 +65,11 @@ internal data class MonetaryImpl(
 
     override fun minus(other: Number) = minus(other.toDouble())
 
-    override operator fun times(quantity: Double) = MonetaryImpl((centsAsDouble * quantity).toULong(), currency)
+    override operator fun times(quantity: Double) = MonetaryImpl((centsAsDouble * quantity).toLong(), currency)
 
     override operator fun times(quantity: Number) = times(quantity.toDouble())
 
-    override operator fun div(quantity: Double) = MonetaryImpl((centsAsDouble / quantity).toULong(), currency)
+    override operator fun div(quantity: Double) = MonetaryImpl((centsAsDouble / quantity).toLong(), currency)
 
     override operator fun div(quantity: Number) = div(quantity.toDouble())
 
@@ -80,9 +80,9 @@ internal data class MonetaryImpl(
     )
 
     override fun compareTo(other: Money): Int = when {
-        centsAsLong == 0uL && other.centsAsLong == 0uL -> 0
-        centsAsLong == 0uL && other.centsAsLong != 0uL -> -centsAsInt
-        centsAsLong != 0uL && other.centsAsLong == 0uL -> centsAsInt
+        centsAsLong == 0L && other.centsAsLong == 0L -> 0
+        centsAsLong == 0L && other.centsAsLong != 0L -> -centsAsInt
+        centsAsLong != 0L && other.centsAsLong == 0L -> centsAsInt
         else -> {
             currencyCheckFor("comparison", other)
             centsAsInt - other.centsAsInt

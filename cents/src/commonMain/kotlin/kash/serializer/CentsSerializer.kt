@@ -13,7 +13,7 @@ import kotlinx.serialization.encoding.Encoder
 object CentsSerializer : KSerializer<Cents> {
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("kash.Cents", PrimitiveKind.LONG)
 
-    override fun deserialize(decoder: Decoder): Cents = decoder.decodeSerializableValue(ULong.serializer()).cents
+    override fun deserialize(decoder: Decoder): Cents = decoder.decodeSerializableValue(Long.serializer()).cents
 
-    override fun serialize(encoder: Encoder, value: Cents) = encoder.encodeSerializableValue(ULong.serializer(), value.asULong)
+    override fun serialize(encoder: Encoder, value: Cents) = encoder.encodeSerializableValue(Long.serializer(), value.asLong)
 }

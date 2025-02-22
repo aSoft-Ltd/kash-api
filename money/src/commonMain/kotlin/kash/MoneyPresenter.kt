@@ -10,9 +10,9 @@ data class MoneyPresenter(
     val currency: Currency,
     val formatter: MoneyFormatter
 ) {
-    val amount: Numeral by lazy { cents / 100 }
+    val amount: Numeral by lazy { cents / 100.0 }
 
-    fun toFormattedString(): String = formatter.format(amount.asDouble)
+    fun toFormattedString(): String = formatter.format(cents.asDouble / 100.0)
         .replace(Template.CURRENCY_NAME, currency.name)
         .replace(Template.CURRENCY_GLOBAL_SYMBOL, currency.globalSymbol)
         .replace(Template.CURRENCY_LOCAL_SYMBOL, currency.localSymbol)

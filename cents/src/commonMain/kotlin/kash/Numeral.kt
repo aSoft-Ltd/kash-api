@@ -6,7 +6,7 @@ package kash
 import kotlinx.JsExport
 
 interface Numeral {
-    val asULong: ULong
+//    val asULong: ULong
     val asLong: Long
     val asDouble: Double
 }

@@ -5,4 +5,4 @@ package kash
 import kollections.Iterable
 import kollections.sumOf
 
-inline fun Iterable<Cents>.sum(): Cents = sumOf { it.asULong }.cents
+inline fun Iterable<Cents>.sum(): Cents = sumOf { it.asLong }.cents

@@ -15,7 +15,7 @@ interface Money : Pretty, Comparable<Money> {
     //cents
     /** In the lowest denomination */
     @SerialName("cents")
-    val centsAsLong: ULong
+    val centsAsLong: Long
 
     val centsAsInt: Int
 
