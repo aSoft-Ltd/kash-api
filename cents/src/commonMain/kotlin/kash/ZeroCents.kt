@@ -1,5 +1,6 @@
 package kash
 
+import kash.internal.CentsDoubleImpl
 import kash.internal.CentsULongImpl
 
 object ZeroCents : Cents {
@@ -13,7 +14,7 @@ object ZeroCents : Cents {
 //        if (other.asULong == 0uL) return ZeroCents
 //        throw RuntimeException("This operation will lead to negative cents")
 //    }
-    override fun minus(other: Cents): Cents = CentsULongImpl(asLong - other.asLong)
+    override fun minus(other: Cents): Cents = CentsDoubleImpl(asDouble - other.asDouble)
 
     override fun compareTo(other: Cents): Int = asLong.compareTo(other.asLong)
 

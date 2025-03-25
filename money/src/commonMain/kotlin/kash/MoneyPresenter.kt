@@ -10,7 +10,7 @@ data class MoneyPresenter(
     val currency: Currency,
     val formatter: MoneyFormatter
 ) {
-    val amount: Numeral by lazy { cents / 100.0 }
+    val amount: DoubleWrapper by lazy { DoubleWrapper(cents.asDouble / 100.0) }
 
     fun toFormattedString(): String = formatter.format(cents.asDouble / 100.0)
         .replace(Template.CURRENCY_NAME, currency.name)
